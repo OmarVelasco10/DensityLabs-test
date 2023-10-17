@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const CardContainer = styled.div`
   width: 100%;
@@ -6,7 +7,8 @@ export const CardContainer = styled.div`
   justify-content: space-between;
   padding: 5px;
   border-radius: 5px;
-  box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 `;
 
 export const Pokeball = styled.img`
@@ -15,5 +17,5 @@ export const Pokeball = styled.img`
 `;
 
 export const Name = styled.span`
-    font-weight: bold;
+  font-weight: bold;
 `;
