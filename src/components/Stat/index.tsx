@@ -6,18 +6,19 @@ interface StatProps {
 }
 
 const Component = ({ value, title }: StatProps) => {
+  const statValue = value ?? "N/A";
   return (
     <div>
       <Paragraph>
-        {title}: <Span>{value !== undefined ? value : "N/A"}</Span>
+        {title}: <Span>{statValue}</Span>
       </Paragraph>{" "}
       <input
         readOnly
         type="range"
-        name={value !== undefined ? value!.toString() : "0"}
+        name={statValue.toString()}
         min="0"
         max="100"
-        value={value !== undefined ? value : 0}
+        value={statValue}
       />
     </div>
   );
