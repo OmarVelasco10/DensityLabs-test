@@ -6,8 +6,8 @@ export type Pokemon = {
 export type PokemonDetails = {
   name: string;
   url: string;
-  type?: Type[] | Type;
-  ability?: Ability[] | Ability;
+  types?: Type[];
+  abilities?: Ability[];
   hp?: number;
   attack?: number;
   defense?: number;
