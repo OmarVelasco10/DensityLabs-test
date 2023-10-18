@@ -6,7 +6,7 @@ export const MainContainer = styled.aside`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 1px solid red;
+  border-right: 1px solid ${(props) => props.theme.colors.borderColor};
 `;
 
 export const LogoContainer = styled.div`

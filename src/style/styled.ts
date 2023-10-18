@@ -6,6 +6,7 @@ declare module "styled-components" {
       backgroundPrimary: string;
       backgroundInput: string;
       primaryColor: string;
+      borderColor: string;
     };
   }
 }

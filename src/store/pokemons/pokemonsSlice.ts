@@ -1,16 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { Pokemon, PokemonDetails } from "../../types/types";
 
 interface PokemonState {
-    isLoading: boolean,
-    page: number,
+    isLoading: boolean;
+    page: number;
     pokemons: Pokemon[];
-    pokemon: Pokemon | null
+    pokemon: PokemonDetails | null;
 }
 
-type Pokemon = {
-    name: string;
-    url: string
-}
 
 const initialState: PokemonState = {
     isLoading: false,
@@ -37,8 +34,14 @@ export const PokemonsSlice = createSlice({
             state.isLoading = false;
             state.pokemon = state.pokemons.find(pokemon => pokemon.name === name) || null;
 
+        },
+        setPokemon: (state, {payload}) => {
+            console.log('setPokemon');
+            console.log('hola',payload.pokemon);
+            state.isLoading = false;
+            state.pokemon = payload.pokemon
         }
     }
 });
 
-export const { startLoadingPokemons, setPokemons, setCurrentPokemon } = PokemonsSlice.actions;
+export const { startLoadingPokemons, setPokemons, setCurrentPokemon, setPokemon } = PokemonsSlice.actions;
