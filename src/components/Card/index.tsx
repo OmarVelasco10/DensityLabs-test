@@ -1,10 +1,7 @@
 import { useNavigate } from "react-router-dom";
-
 import { currentPokemon } from "../../store/pokemons";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
-
 import pokeball from "../../assets/pokeball.png";
-
 import { CardContainer, Name, Pokeball } from "./styled";
 
 interface CardProps {

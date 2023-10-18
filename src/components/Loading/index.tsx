@@ -1,5 +1,4 @@
 import pokeball from "../../assets/pokeball.png";
-
 import { LoadingContainer, LoadingImg } from "./styled";
 
 const Component = () => {

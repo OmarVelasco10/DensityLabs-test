@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-
 import { getPokemons } from "../../store/pokemons";
-
 import { useAppSelector, useAppDispatch } from "../../hooks";
-
 import { Card, Aside, Header, Loading } from "../../components";
 import { ButtonsContainer, Main, MainContainer } from "./styled";
 

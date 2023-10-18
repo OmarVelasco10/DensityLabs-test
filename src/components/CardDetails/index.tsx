@@ -1,7 +1,5 @@
 import { PokemonDetails } from "../../types/types";
-
 import { InfoItem, Stat } from "../";
-
 import {
   AbilitiesContainer,
   CardContainer,
