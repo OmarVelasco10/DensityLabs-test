@@ -1,5 +1,5 @@
 import { pokemonApi } from "../../api/pokemonApi";
-import { setPokemons, startLoadingPokemons } from "./pokemonsSlice"
+import { setCurrentPokemon, setPokemons, startLoadingPokemons } from "./pokemonsSlice"
 
 
 export const getPokemons = (page = 1) => {
@@ -15,6 +15,19 @@ export const getPokemons = (page = 1) => {
         dispatch(setPokemons({
             pokemons: data.results,
             page
+        }));
+    }
+}
+
+export const currentPokemon = (name: string) => {
+    return async(dispatch: any) => {
+        dispatch(startLoadingPokemons());
+
+        // pokemon?limit=20&offset=20.
+       
+
+        dispatch(setCurrentPokemon({
+            name
         }));
     }
 }

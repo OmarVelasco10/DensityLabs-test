@@ -9,6 +9,19 @@ export const MainContainer = styled.aside`
   border-right: 1px solid red;
 `;
 
-export const LogoContainer = styled.div``;
+export const LogoContainer = styled.div`
+    width: 300px;
 
-export const PokemonContainer = styled.div``;
+    img {
+        width: 100%;
+    }
+`;
+
+export const PokemonContainer = styled.div`
+
+    width: 300px;
+
+    img {
+        width: 100%;
+    }
+`;

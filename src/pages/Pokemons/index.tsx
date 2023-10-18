@@ -24,12 +24,12 @@ const Component = () => {
 
   return (
     <MainContainer>
-      <Aside />
+      <Aside/>
 
       <Main>
         <Header query={query} setQuery={setQuery}/>
         {filteredPokemons.map((pokemon, index) => (
-          <Card key={`${pokemon.name}-${index}`} name={pokemon.name} />
+          <Card key={`${pokemon.name}-${index}`} name={pokemon.name} url={pokemon.url}/>
         ))}
 
         <ButtonsContainer>
