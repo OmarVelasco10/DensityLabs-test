@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const MainContainer = styled.aside`
   display: flex;
   flex-direction: column;
@@ -10,18 +9,17 @@ export const MainContainer = styled.aside`
 `;
 
 export const LogoContainer = styled.div`
-    width: 300px;
+  width: 300px;
 
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 `;
 
 export const PokemonContainer = styled.div`
+  width: 300px;
 
-    width: 300px;
-
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 `;

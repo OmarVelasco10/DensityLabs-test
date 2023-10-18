@@ -1,31 +1,35 @@
-import pokeapiLogo from '../../assets/pokeapiLogo.png';
-import pikachu from '../../assets/pikachu.png';
+import { useAppSelector } from "../../hooks/useAppSelector";
+import { getNumber } from "../../helpers/getNumber";
+
+import pokeapiLogo from "../../assets/pokeapiLogo.png";
+import pikachu from "../../assets/pikachu.png";
+
+
 import { LogoContainer, MainContainer, PokemonContainer } from "./styled";
-import { useAppSelector } from '../../hooks/useAppSelector';
-import { getNumber } from '../../helpers/getNumber';
 
 const Component = () => {
-    const { pokemon } = useAppSelector(
-        (state) => state.pokemons
-      );
-    
-    return (
-        <MainContainer>
-        <LogoContainer>
-            <img src={pokeapiLogo} alt='pokemon'/>
-          </LogoContainer>
-          <PokemonContainer>
-            {
-                pokemon 
-                ? <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getNumber(pokemon.url)}.png`} alt={pokemon.name}/>
+  const { pokemon } = useAppSelector((state) => state.pokemons);
 
-                :  <img src={pikachu} alt='pikachu'/>
-            }
-           
-          </PokemonContainer>
-        </MainContainer>
-    )
-  }
-  
-  export { Component as Aside };
-  export default Component;
+  return (
+    <MainContainer>
+      <LogoContainer>
+        <img src={pokeapiLogo} alt="pokemon" />
+      </LogoContainer>
+      <PokemonContainer>
+        {pokemon ? (
+          <img
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getNumber(
+              pokemon.url
+            )}.png`}
+            alt={pokemon.name}
+          />
+        ) : (
+          <img src={pikachu} alt="pikachu" />
+        )}
+      </PokemonContainer>
+    </MainContainer>
+  );
+};
+
+export { Component as Aside };
+export default Component;

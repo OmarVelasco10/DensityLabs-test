@@ -7,13 +7,11 @@ export const MainContainer = styled.div`
   grid-template-columns: 1fr 2fr;
 `;
 
-
-
 export const Main = styled.main`
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 
 export const ButtonsContainer = styled.div`
@@ -21,6 +19,3 @@ export const ButtonsContainer = styled.div`
   justify-content: center;
   gap: 10px;
 `;
-
-
-

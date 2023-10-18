@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
+
+import { getPokemons } from "../../store/pokemons";
+
 import { useAppSelector } from "../../hooks/useAppSelector";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
-import { getPokemons } from "../../store/pokemons";
-import { ButtonsContainer, Main, MainContainer } from "./styled";
 
-import { Card } from "../../components/Card";
-import { Aside } from "../../components/Aside";
-import { Header } from "../../components/Header";
-import { Loading } from "../../components/Loading";
+import { Card, Aside, Header, Loading } from "../../components";
+
+import { ButtonsContainer, Main, MainContainer } from "./styled";
 
 const Component = () => {
   const [query, setQuery] = useState("");
@@ -51,7 +51,7 @@ const Component = () => {
                 Prev
               </button>
               <button
-                className="btn btn-success"
+                className="btn btn-primary"
                 disabled={isLoading || page === 8}
                 onClick={() => dispatch(getPokemons(page + 1))}
               >

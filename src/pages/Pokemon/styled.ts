@@ -8,25 +8,20 @@ export const MainContainer = styled.div`
 `;
 
 export const Main = styled.main`
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 `;
-
-
 
 export const Button = styled.button`
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 10px;
-    position: absolute;
-    left: 550px;
-    top: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  position: absolute;
+  left: 550px;
+  top: 20px;
 `;
-
-
-
