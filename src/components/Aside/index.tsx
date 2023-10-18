@@ -4,7 +4,6 @@ import { getNumber } from "../../helpers/getNumber";
 import pokeapiLogo from "../../assets/pokeapiLogo.png";
 import pikachu from "../../assets/pikachu.png";
 
-
 import { LogoContainer, MainContainer, PokemonContainer } from "./styled";
 
 const Component = () => {

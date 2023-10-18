@@ -6,7 +6,6 @@ import { useAppSelector } from "../../hooks/useAppSelector";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 
 import { Card, Aside, Header, Loading } from "../../components";
-
 import { ButtonsContainer, Main, MainContainer } from "./styled";
 
 const Component = () => {
