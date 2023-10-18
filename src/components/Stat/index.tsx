@@ -1,18 +1,25 @@
 import { Paragraph, Span } from "../CardDetails/styled";
-import { MainContainer } from "./styled";
 
 interface StatProps {
-    value: number | undefined
+  title: string | undefined;
+  value: number | undefined;
 }
 
-const Component = ({value}: StatProps) => {
+const Component = ({ value, title }: StatProps) => {
   return (
-    <MainContainer>
+    <div>
       <Paragraph>
-        hp: <Span>{value !== undefined ? value : "N/A"}</Span>
+        {title}: <Span>{value !== undefined ? value : "N/A"}</Span>
       </Paragraph>{" "}
-      <input readOnly type="range" name={value !== undefined ? value!.toString() : "0"} min="0" max="100" value={value !== undefined ? value : 0} />
-    </MainContainer>
+      <input
+        readOnly
+        type="range"
+        name={value !== undefined ? value!.toString() : "0"}
+        min="0"
+        max="100"
+        value={value !== undefined ? value : 0}
+      />
+    </div>
   );
 };
 

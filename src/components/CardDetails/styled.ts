@@ -17,6 +17,8 @@ export const Name = styled.h2`
 export const Title = styled.span`
     font-weight: bold;
     font-size: 1.3rem;
+  color: ${(props) => props.theme.colors.borderColor};
+
 `;
 
 export const Span = styled.span`
@@ -34,9 +36,6 @@ export const TypeContainer = styled.div`
   gap: 10px;
   align-items: baseline;
 
-  p {
-    font-size: 1.2rem;
-  }
 `;
 
 export const InfoContainer = styled.div`
@@ -55,7 +54,7 @@ export const StatsContainer = styled.div`
 
   div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   div p {
@@ -72,4 +71,5 @@ export const StatsContainer = styled.div`
 export const AbilityContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
 `;

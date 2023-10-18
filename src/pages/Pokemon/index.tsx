@@ -6,6 +6,7 @@ import { useAppSelector } from "../../hooks/useAppSelector";
 import { Aside } from "../../components/Aside";
 import { Button, Main, MainContainer } from "./styled";
 import { CardDetails } from "../../components/CardDetails";
+import { Loading } from "../../components/Loading";
 
 const Component = () => {
   const { name } = useParams();
@@ -25,8 +26,10 @@ const Component = () => {
       <Button className="btn btn-warning" onClick={() => navigate(-1)}>Go Back</Button>
 
       <Main>
-
-        <CardDetails pokemon={pokemon}/>
+        {
+          (isLoading || !pokemon) ? <Loading /> : <CardDetails pokemon={pokemon}/>
+        }
+   
 
       </Main>
     </MainContainer>

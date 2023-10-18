@@ -44,30 +44,30 @@ const Component = ({ pokemon }: CardDetailsProps) => {
       <TypeContainer>
         <Title>Type: </Title>
         { types && types.map((item, index) => (
-          <p key={`${item.type.name}-${index}`}>{item.type.name}</p>
+          <li key={`${item.type.name}-${index}`}><Span>{item.type.name}</Span></li>
         ))}
       </TypeContainer>
       <InfoContainer>
-        <InfoItem title={'Number'} value={number}/>
-        <InfoItem title={'Height'} value={height}/>
-        <InfoItem title={'Weight'} value={weight}/>
+        <InfoItem title='Number' value={number}/>
+        <InfoItem title='Height' value={height}/>
+        <InfoItem title='Weight' value={weight}/>
       </InfoContainer>
       <PowerContainer>
         <StatsContainer>
           <Title>Stats</Title>
-          <Stat value={hp} />
-          <Stat value={attack} />
-          <Stat value={defense} />
-          <Stat value={specialAttack} />
-          <Stat value={specialDefense} />
-          <Stat value={speed} />
+          <Stat title='Hp' value={hp} />
+          <Stat title='Attack' value={attack} />
+          <Stat title='Defense' value={defense} />
+          <Stat title='Special Attack' value={specialAttack} />
+          <Stat title='Special Defense' value={specialDefense} />
+          <Stat title='Speed' value={speed} />
         </StatsContainer>
         <AbilityContainer>
-          <Title>Abilities: </Title>
+          <Title>Abilities </Title>
           { abilities && abilities.map((item, index) => (
-            <Span key={`${item.ability.name}-${index}`}>
+            <li  key={`${item.ability.name}-${index}`}><Span>
               {item.ability.name}
-            </Span>
+            </Span></li>
           ))}
         </AbilityContainer>
       </PowerContainer>
