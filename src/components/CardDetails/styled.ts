@@ -65,7 +65,7 @@ export const StatsContainer = styled.div`
   }
 `;
 
-export const AbilityContainer = styled.div`
+export const AbilitiesContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

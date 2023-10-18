@@ -3,7 +3,7 @@ import { PokemonDetails } from "../../types/types";
 import { InfoItem, Stat } from "../";
 
 import {
-  AbilityContainer,
+  AbilitiesContainer,
   CardContainer,
   InfoContainer,
   Name,
@@ -65,7 +65,7 @@ const Component = ({ pokemon }: CardDetailsProps) => {
           <Stat title="Special Defense" value={specialDefense} />
           <Stat title="Speed" value={speed} />
         </StatsContainer>
-        <AbilityContainer>
+        <AbilitiesContainer>
           <Title>Abilities </Title>
           {abilities &&
             abilities.map((item, index) => (
@@ -73,7 +73,7 @@ const Component = ({ pokemon }: CardDetailsProps) => {
                 <Span>{item.ability.name}</Span>
               </li>
             ))}
-        </AbilityContainer>
+        </AbilitiesContainer>
       </PowerContainer>
     </CardContainer>
   );
