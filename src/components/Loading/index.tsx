@@ -1,10 +1,10 @@
-import pokeball from "../../assets/pokeball.png";
+import pokeballGif from "../../assets/pokeballGif.gif";
 import { LoadingContainer, LoadingImg } from "./styled";
 
 const Component = () => {
   return (
     <LoadingContainer>
-      <LoadingImg src={pokeball} alt="pokemon" />
+      <LoadingImg src={pokeballGif} alt="pokemon" />
     </LoadingContainer>
   );
 };

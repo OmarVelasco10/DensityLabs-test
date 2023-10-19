@@ -11,8 +11,8 @@ interface PokemonState {
 const initialState: PokemonState = {
   isLoading: false,
   page: 0,
-  pokemon: null,
   pokemons: [],
+  pokemon: null,
 };
 
 export const PokemonsSlice = createSlice({

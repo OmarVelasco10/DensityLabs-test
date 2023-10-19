@@ -1,6 +1,5 @@
-# Getting Started with Create React App
+# Pokemon API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Project status
 This project shows the frontend of a web application, which consumes a public API and obtains results, once they are obtained they are rendered in the form of a list, clicking on one of these elements changes an image shown on the left side and Giving 2 clicks redirects to another page where you can see details of the pokemon. It also has pagination, which shows only 20 Pokémon, reaching a total of 150 Pokémon.
 It uses redux to store the information of:
@@ -13,9 +12,10 @@ It uses redux to store the information of:
 
 ## steps development
 
-1.- Run "npm i" in the terminal to get all.
-2.- Rename file .env.template to .env
-3.- Do the respective changes in environment variables (if necessary).
+1.- Change node version to 19.5.0
+2.- Run "npm i" in the terminal to get all.
+3.- Rename file .env.template to .env
+4.- Do the respective changes in environment variables (if necessary).
 
 
 ```

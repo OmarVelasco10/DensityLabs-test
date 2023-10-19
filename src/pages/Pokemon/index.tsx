@@ -9,26 +9,26 @@ const Component = () => {
   const { name } = useParams();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const { isLoading, pokemon } = useAppSelector((state) => state.pokemons);
+  const { isLoading } = useAppSelector((state) => state.pokemons);
 
   useEffect(() => {
     if (name) {
-      dispatch(getPokemon(name));
+      dispatch(getPokemon(name.toLowerCase()));
     }
   }, [name]);
 
   return (
     <MainContainer>
       <Aside />
-      <Button className="btn btn-warning" onClick={() => navigate(-1)}>
-        Go Back
-      </Button>
 
       <Main>
-        {isLoading || !pokemon ? (
+        <Button className="btn btn-warning" onClick={() => navigate('/')}>
+          Go Back
+        </Button>
+        {isLoading ? (
           <Loading />
         ) : (
-          <CardDetails pokemon={pokemon} />
+          <CardDetails />
         )}
       </Main>
     </MainContainer>

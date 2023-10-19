@@ -9,9 +9,7 @@ export const LoadingContainer = styled.div`
 `;
 
 export const LoadingImg = styled.img`
-  width: 30%;
-  height: 30%;
-  max-width: 200px;
-  max-height: 200px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 `;

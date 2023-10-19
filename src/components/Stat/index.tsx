@@ -1,4 +1,5 @@
 import { Paragraph, Span } from "../CardDetails/styled";
+import { Input } from "./syled";
 
 interface StatProps {
   title: string | undefined;
@@ -12,13 +13,13 @@ const Component = ({ value, title }: StatProps) => {
       <Paragraph>
         {title}: <Span>{statValue}</Span>
       </Paragraph>{" "}
-      <input
+      <Input
         readOnly
         type="range"
         name={statValue.toString()}
         min="0"
         max="100"
-        value={statValue}
+        value={statValue.toString()}
       />
     </div>
   );

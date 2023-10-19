@@ -8,7 +8,7 @@ const Component = ({ query, setQuery }: HeaderProps) => {
   return (
     <Header>
       <Input
-        placeholder="Search a Pokemon"
+        placeholder="Search a Pokemon on this page"
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}

@@ -1,5 +1,6 @@
-import { PokemonDetails } from "../../types/types";
+import { useAppSelector } from "../../hooks";
 import { InfoItem, Stat } from "../";
+
 import {
   AbilitiesContainer,
   CardContainer,
@@ -12,11 +13,12 @@ import {
   TypeContainer,
 } from "./styled";
 
-interface CardDetailsProps {
-  pokemon?: PokemonDetails | null;
-}
 
-const Component = ({ pokemon }: CardDetailsProps) => {
+
+const Component = () => {
+  const { pokemon } = useAppSelector((state) => state.pokemons);
+
+
   if (!pokemon) {
     return <div>Error to fetch pokemon.</div>;
   }
@@ -52,9 +54,9 @@ const Component = ({ pokemon }: CardDetailsProps) => {
           <Title>Abilities </Title>
           {pokemon.abilities &&
             pokemon.abilities.map((item, index) => (
-              <li key={`${item.ability.name}-${index}`}>
-                <Span>{item.ability.name}</Span>
-              </li>
+              <Span key={`${item.ability.name}-${index}`}>
+                {item.ability.name}
+              </Span>
             ))}
         </AbilitiesContainer>
       </PowerContainer>

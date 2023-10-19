@@ -7,5 +7,7 @@ export const theme: Theme = {
     backgroundInput: "rgba(121,121,121,0,267)",
     primaryColor: "#292929",
     borderColor: "#085ED6",
+    backgroundCardHover: "rgba(222,245,221,1)",
+    backgroundCardActive: "rgba(184,203,237,1)"
   },
 };

@@ -12,10 +12,20 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow: hidden;
 `;
 
 export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 10px;
+`;
+
+export const PokemonsContainer = styled.div`
+   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+  user-select: none;
 `;

@@ -21,7 +21,4 @@ export const Button = styled.button`
   cursor: pointer;
   outline: none;
   padding: 10px;
-  position: absolute;
-  left: 550px;
-  top: 20px;
 `;

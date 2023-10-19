@@ -7,6 +7,9 @@ declare module "styled-components" {
       backgroundInput: string;
       primaryColor: string;
       borderColor: string;
+      backgroundCardHover: string;
+      backgroundCardActive: string;
+
     };
   }
 }

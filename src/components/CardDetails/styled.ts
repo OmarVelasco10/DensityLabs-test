@@ -6,6 +6,10 @@ export const CardContainer = styled.div`
   border: 1px solid ${(props) => props.theme.colors.borderColor};
   border-radius: 5px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px)  {
+    min-width: 400px;
+  }
 `;
 
 export const Name = styled.h2`
@@ -42,6 +46,10 @@ export const InfoContainer = styled.div`
 export const PowerContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
+
+  @media (max-width: 768px)  {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const StatsContainer = styled.div`
@@ -61,6 +69,14 @@ export const StatsContainer = styled.div`
   div span {
     font-size: 1.2rem;
     font-weight: normal;
+  }
+
+  @media (max-width: 768px)  {
+    gap: 5px;
+    
+    p {
+        margin-bottom: 0px;
+    }
   }
 `;
 

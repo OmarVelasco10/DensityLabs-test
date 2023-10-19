@@ -45,22 +45,12 @@ export const getPokemons = (page = 1) => {
 
     try {
       const offset = (page - 1) * 20;
-
+      let limit = 0;
+      const lastPage = 8;
+      page === lastPage ? (limit = 10) : (limit = 20);
       const { data } = await pokemonApi.get(
-        `pokemon?limit=20&offset=${offset}`
+        `pokemon?limit=${limit}&offset=${offset}`
       );
-
-      // With this 'if' we can limit the pokemon to 150
-      if (page === 8) {
-        const pokemons = data.results.slice(0, 10);
-
-        return dispatch(
-          setPokemons({
-            pokemons,
-            page,
-          })
-        );
-      }
 
       dispatch(
         setPokemons({
