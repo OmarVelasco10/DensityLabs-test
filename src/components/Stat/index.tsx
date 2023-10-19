@@ -10,10 +10,11 @@ interface StatProps {
 const Component = ({ value, title }: StatProps) => {
   const statValue = value ?? "N/A";
   return (
-    <div>
+    <div data-testid="stat-container-id">
         <InfoItem title={title} value={statValue}/>
      
       <Input
+        data-testid="stat-input-id"
         readOnly
         type="range"
         name={statValue.toString()}

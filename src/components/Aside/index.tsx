@@ -8,7 +8,7 @@ const Component = () => {
   const { pokemon } = useAppSelector((state) => state.pokemons);
 
   return (
-    <MainContainer>
+    <MainContainer data-testid="aside-container-id">
       <LogoContainer>
         <img src={pokeapiLogo} alt="pokemon" />
       </LogoContainer>

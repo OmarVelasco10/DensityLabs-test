@@ -6,8 +6,9 @@ interface HeaderProps {
 }
 const Component = ({ query, setQuery }: HeaderProps) => {
   return (
-    <Header>
+    <Header data-testid="header-container-id">
       <Input
+        data-testid="header-input-id"
         placeholder="Search a Pokemon on this page"
         type="text"
         value={query}

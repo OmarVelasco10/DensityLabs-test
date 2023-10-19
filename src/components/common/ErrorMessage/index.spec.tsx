@@ -3,9 +3,10 @@ import { screen, render } from "@testing-library/react";
 
 import Component from "./";
 import { WrapperTest } from "../../../__test_mocks__/WrapperTest";
-describe("InfoItem", () => {
+
+describe("ErrorMessage", () => {
     const message = "Testing message";
-  it("Should render InfoItem container", () => {
+  it("Should render ErrorMessage container", () => {
     render(
       <WrapperTest>
         <Component  message={message}/>

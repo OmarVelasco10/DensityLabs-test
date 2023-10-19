@@ -4,8 +4,8 @@ import { LoadingContainer, LoadingImg } from "./styled";
 
 const Component = () => {
   return (
-    <LoadingContainer>
-      <LoadingImg src={pokeballGif} alt="pokemon" />
+    <LoadingContainer data-testid="loading-container-id">
+      <LoadingImg data-testid="loading-img-id" src={pokeballGif} alt="loading" />
     </LoadingContainer>
   );
 };
