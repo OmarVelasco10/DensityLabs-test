@@ -18,6 +18,7 @@ export const CardContainer = styled.div`
 
 export const Name = styled.h2`
   color: ${(props) => props.theme.colors.borderColor};
+  font-weight: bold;
 `;
 
 export const Title = styled.span`
@@ -30,6 +31,7 @@ export const TypeContainer = styled.div`
   display: flex;
   gap: 10px;
   align-items: baseline;
+  margin-bottom: 5px;
 `;
 
 export const InfoContainer = styled.div`

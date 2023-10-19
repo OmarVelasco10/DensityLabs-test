@@ -18,10 +18,15 @@ export const LogoContainer = styled.div`
   @media (max-width: 768px)  {
     max-width: 280px;
   }
+
 `;
 
 export const PokemonContainer = styled.div`
   width: 300px;
+
+  @media (max-width: 425px)  {
+    max-width: 200px;
+  }
 
   img {
     width: 100%;

@@ -2,6 +2,7 @@
 
 ## Project status
 This project shows the frontend of a web application, which consumes a public API and obtains results, once they are obtained they are rendered in the form of a list, clicking on one of these elements changes an image shown on the left side and Giving 2 clicks redirects to another page where you can see details of the pokemon. It also has pagination, which shows only 20 Pokémon, reaching a total of 150 Pokémon.
+
 It uses redux to store the information of:
 *All pokemons
 *Details of a pokemon
@@ -9,6 +10,7 @@ It uses redux to store the information of:
 *The page number
 *isLoading
 
+The App is responsive on PCs, Tablets(768px) and on Mobile devices(425px);
 
 ## steps development
 
@@ -34,6 +36,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+### `npm run test`
+Run the tests.
+
+The terminal will reload if you make edits.\
+You will also see any lint errors in the terminal.
 
 ### `Description project`
 For this exercise you will need to complete a series of tasks to demonstrate your logical and creative skills. You will have to make a proposal with a good presentation that is attractive to users.
