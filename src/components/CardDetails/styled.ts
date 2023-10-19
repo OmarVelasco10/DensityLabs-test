@@ -10,6 +10,10 @@ export const CardContainer = styled.div`
   @media (max-width: 768px)  {
     min-width: 400px;
   }
+
+  @media (max-width: 425px)  {
+    min-width: 300px;
+  }
 `;
 
 export const Name = styled.h2`

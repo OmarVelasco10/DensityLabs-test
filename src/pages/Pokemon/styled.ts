@@ -5,9 +5,11 @@ export const MainContainer = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr;
+
   @media (max-width: 425px)  {
     grid-template-columns: 1fr;
   }
+
 `;
 
 export const Main = styled.main`
@@ -19,8 +21,9 @@ export const Main = styled.main`
   align-items: center;
 
   @media (max-width: 425px)  {
-    padding: 0px;
+    padding: 5px;
   }
+
 `;
 
 export const Button = styled.button`
