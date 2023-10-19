@@ -7,9 +7,11 @@ interface InfoItemProps {
 
 const Component = ({ value, title }: InfoItemProps) => {
   return (
-    <Paragraph>
-      {title}:<Span>{value}</Span>
-    </Paragraph>
+    <div data-testid="infoItem-container-id">
+      <Paragraph>
+        {title}:<Span>{value}</Span>
+      </Paragraph>
+    </div>
   );
 };
 

@@ -15,6 +15,7 @@ const Component = ({ name }: CardProps) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
+    console.log('click');
     dispatch(currentPokemon(name));
   };
 
@@ -23,7 +24,7 @@ const Component = ({ name }: CardProps) => {
   };
 
   return (
-    <CardContainer onClick={handleClick} onDoubleClick={handleDoubleClick}>
+    <CardContainer data-testid="pokemon-card-id" onClick={handleClick} onDoubleClick={handleDoubleClick}>
       <Name> {name.toUpperCase()}</Name>
 
       <Pokeball src={pokeball} alt="pokeball" />

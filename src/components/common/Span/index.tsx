@@ -5,7 +5,7 @@ interface SpanProps {
 }
 
 const Component = ({ children }: SpanProps) => {
-  return <Span>{children}</Span>;
+  return <Span data-testid="span-container-id">{children}</Span>;
 };
 
 export { Component as Span };

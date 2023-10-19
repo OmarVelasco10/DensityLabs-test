@@ -5,7 +5,7 @@ interface ParagraphProps {
 }
 
 const Component = ({ children }: ParagraphProps) => {
-  return <Paragraph>{children}</Paragraph>;
+  return <Paragraph data-testid="paragraph-container-id">{children}</Paragraph>;
 };
 
 export { Component as Paragraph };

@@ -7,7 +7,7 @@ interface ErrorMessageProps {
 
 const Component = ({ message }: ErrorMessageProps) => {
   return (
-    <MainContainer>
+    <MainContainer data-testid="errorMessage-container-id">
       <Paragraph>{message}</Paragraph>
     </MainContainer>
   );
