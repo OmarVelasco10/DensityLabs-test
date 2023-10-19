@@ -5,6 +5,10 @@ export const MainContainer = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr;
+
+  @media (max-width: 425px)  {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Main = styled.main`

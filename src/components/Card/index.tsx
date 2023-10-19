@@ -15,7 +15,6 @@ const Component = ({ name }: CardProps) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    console.log('click');
     dispatch(currentPokemon(name));
   };
 

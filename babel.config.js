@@ -11,5 +11,9 @@ module.exports = {
       "@babel/preset-react",
       "@babel/preset-typescript",
     ],
+    transform: {
+      '^.+\\.ts?$': 'ts-jest',
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
   };
   

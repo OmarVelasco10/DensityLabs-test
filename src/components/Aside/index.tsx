@@ -9,10 +9,10 @@ const Component = () => {
 
   return (
     <MainContainer data-testid="aside-container-id">
-      <LogoContainer>
+      <LogoContainer data-testid="aside-logo-id">
         <img src={pokeapiLogo} alt="pokemon" />
       </LogoContainer>
-      <PokemonContainer>
+      <PokemonContainer data-testid="aside-pokemon-container-id">
         {pokemon ? (
           <img
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getNumber(

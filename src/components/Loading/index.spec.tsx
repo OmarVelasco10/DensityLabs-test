@@ -1,25 +1,25 @@
 import "@testing-library/jest-dom";
 import { screen, render } from "@testing-library/react";
 
-import Component from "./";
 import { WrapperTest } from "../../__test_mocks__/WrapperTest";
+import Component from "./";
 
 describe("Loading", () => {
-  it("Should render Loading container", () => {
-    render(
+  const mountComponent = () => {
+    return render(
       <WrapperTest>
         <Component />
       </WrapperTest>
     );
+  };
+
+  it("Should render Loading container", () => {
+    mountComponent();
     expect(screen.getByTestId("loading-container-id")).toBeInTheDocument();
   });
 
   it("Should render the Image and the correct alt", () => {
-    render(
-      <WrapperTest>
-        <Component />
-      </WrapperTest>
-    );
+    mountComponent();
 
     const imgElement = screen.getByTestId("loading-img-id");
 

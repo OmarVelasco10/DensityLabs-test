@@ -29,7 +29,7 @@ const Component = () => {
   });
 
   return (
-    <MainContainer>
+    <MainContainer data-testid="hola">
       <Aside />
 
       <Main>

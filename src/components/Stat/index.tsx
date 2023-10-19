@@ -17,7 +17,7 @@ const Component = ({ value, title }: StatProps) => {
         data-testid="stat-input-id"
         readOnly
         type="range"
-        name={statValue.toString()}
+        name={title?.toLowerCase()}
         min="0"
         max="100"
         value={statValue.toString()}

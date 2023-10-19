@@ -30,9 +30,9 @@ const Component = () => {
   }
 
   return (
-    <CardContainer>
-      <Name> {pokemon.name.toUpperCase()}</Name>
-      <TypeContainer>
+    <CardContainer data-testid="cardDetails-container-id">
+      <Name data-testid="cardDetails-name-id"> {pokemon.name.toUpperCase()}</Name>
+      <TypeContainer data-testid="cardDetails-type-container-id">
         <Title>Type: </Title>
         {pokemon.types &&
           pokemon.types.map((item, index) => (
@@ -41,22 +41,22 @@ const Component = () => {
             </li>
           ))}
       </TypeContainer>
-      <InfoContainer>
+      <InfoContainer data-testid="cardDetails-info-container-id">
         <InfoItem title="Number" value={pokemon.number} />
         <InfoItem title="Height" value={pokemon.height} />
         <InfoItem title="Weight" value={pokemon.weight} />
       </InfoContainer>
-      <PowerContainer>
-        <StatsContainer>
+      <PowerContainer data-testid="cardDetails-power-container-id">
+        <StatsContainer data-testid="cardDetails-stats-container-id">
           <Title>Stats</Title>
-          <Stat title="Hp" value={pokemon.hp} />
+          <Stat data-testid="cardDetails-hp-id" title="Hp" value={pokemon.hp} />
           <Stat title="Attack" value={pokemon.attack} />
           <Stat title="Defense" value={pokemon.defense} />
           <Stat title="Special Attack" value={pokemon.specialAttack} />
           <Stat title="Special Defense" value={pokemon.specialDefense} />
           <Stat title="Speed" value={pokemon.speed} />
         </StatsContainer>
-        <AbilitiesContainer>
+        <AbilitiesContainer data-testid="cardDetails-abilities-container-id">
           <Title>Abilities </Title>
           {pokemon.abilities &&
             pokemon.abilities.map((item, index) => (
