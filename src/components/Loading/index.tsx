@@ -1,4 +1,5 @@
-import pokeballGif from "../../assets/pokeballGif.gif";
+import { pokeballGif } from "../../assets";
+
 import { LoadingContainer, LoadingImg } from "./styled";
 
 const Component = () => {

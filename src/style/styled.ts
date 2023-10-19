@@ -9,7 +9,7 @@ declare module "styled-components" {
       borderColor: string;
       backgroundCardHover: string;
       backgroundCardActive: string;
-
+      backgroundError: string;
     };
   }
 }

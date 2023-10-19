@@ -1,7 +1,6 @@
 import { useAppSelector } from "../../hooks/useAppSelector";
 import { getNumber } from "../../helpers/getNumber";
-import pokeapiLogo from "../../assets/pokeapiLogo.png";
-import pikachu from "../../assets/pikachu.png";
+import {pokeapiLogo, pikachu} from "../../assets";
 
 import { LogoContainer, MainContainer, PokemonContainer } from "./styled";
 

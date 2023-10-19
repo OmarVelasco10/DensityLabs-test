@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+
 import { getPokemon } from "../../store/pokemons";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { Aside, CardDetails, Loading } from "../../components";
+
 import { Button, Main, MainContainer } from "./styled";
 
 const Component = () => {

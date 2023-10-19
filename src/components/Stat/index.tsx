@@ -1,18 +1,18 @@
-import { Paragraph, Span } from "../CardDetails/styled";
+
+import { InfoItem } from "../common/InfoItem";
 import { Input } from "./syled";
 
 interface StatProps {
-  title: string | undefined;
-  value: number | undefined;
+  title?: string;
+  value?: number;
 }
 
 const Component = ({ value, title }: StatProps) => {
   const statValue = value ?? "N/A";
   return (
     <div>
-      <Paragraph>
-        {title}: <Span>{statValue}</Span>
-      </Paragraph>{" "}
+        <InfoItem title={title} value={statValue}/>
+     
       <Input
         readOnly
         type="range"

@@ -1,5 +1,6 @@
 import { useAppSelector } from "../../hooks";
-import { InfoItem, Stat } from "../";
+import { InfoItem, Span } from "../common";
+import { Stat } from "../";
 
 import {
   AbilitiesContainer,
@@ -7,11 +8,12 @@ import {
   InfoContainer,
   Name,
   PowerContainer,
-  Span,
   StatsContainer,
   Title,
   TypeContainer,
 } from "./styled";
+
+import { ErrorMessage } from "../common/ErrorMessage";
 
 
 
@@ -20,7 +22,11 @@ const Component = () => {
 
 
   if (!pokemon) {
-    return <div>Error to fetch pokemon.</div>;
+    return <ErrorMessage message="Error to fetch Pokemon" />;
+  }
+
+  if(pokemon.number && pokemon.number > 151) {
+    return <ErrorMessage message={`${pokemon.name.toUpperCase()} is not part of the first generation`}/>
   }
 
   return (

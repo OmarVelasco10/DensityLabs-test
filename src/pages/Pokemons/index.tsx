@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
+
 import { getPokemons } from "../../store/pokemons";
 import { useAppSelector, useAppDispatch } from "../../hooks";
-import { Card, Aside, Header, Loading } from "../../components";
+import { Card, Aside, Header, Loading, ErrorMessage } from "../../components";
+import { Pokemon } from "../../types/types";
+
 import {
   ButtonsContainer,
   Main,
   MainContainer,
   PokemonsContainer,
 } from "./styled";
-import { Pokemon } from "../../types/types";
 
 const Component = () => {
   const [query, setQuery] = useState("");
@@ -38,14 +40,15 @@ const Component = () => {
             <Header query={query} setQuery={setQuery} />
             <PokemonsContainer>
               {filteredPokemons.length === 0 ? (
-                <div>{query} does not exist on this page. Try on another page.</div>
+                <ErrorMessage
+                  message={`${query} does not exist on this page. Try on another page.`}
+                />
               ) : (
                 <>
                   {filteredPokemons.map((pokemon, index) => (
                     <Card
                       key={`${pokemon.name}-${index}`}
                       name={pokemon.name}
-                      url={pokemon.url}
                     />
                   ))}
                   <ButtonsContainer>

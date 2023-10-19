@@ -8,6 +8,7 @@ export const theme: Theme = {
     primaryColor: "#292929",
     borderColor: "#085ED6",
     backgroundCardHover: "rgba(222,245,221,1)",
-    backgroundCardActive: "rgba(184,203,237,1)"
+    backgroundCardActive: "rgba(184,203,237,1)",
+    backgroundError: "#e60025"
   },
 };

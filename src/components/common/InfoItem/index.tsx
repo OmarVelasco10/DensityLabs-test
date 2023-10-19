@@ -1,8 +1,8 @@
-import { Paragraph, Span } from "../CardDetails/styled";
+import { Paragraph, Span } from "../";
 
 interface InfoItemProps {
-  title: string | undefined;
-  value: number | undefined;
+  title?: string;
+  value?: number | string;
 }
 
 const Component = ({ value, title }: InfoItemProps) => {

@@ -22,16 +22,6 @@ export const Title = styled.span`
   color: ${(props) => props.theme.colors.borderColor};
 `;
 
-export const Span = styled.span`
-  font-size: 1.2rem;
-  font-weight: normal;
-`;
-
-export const Paragraph = styled.p`
-  font-weight: bold;
-  font-size: 1.3rem;
-`;
-
 export const TypeContainer = styled.div`
   display: flex;
   gap: 10px;
@@ -73,7 +63,7 @@ export const StatsContainer = styled.div`
 
   @media (max-width: 768px)  {
     gap: 5px;
-    
+
     p {
         margin-bottom: 0px;
     }
